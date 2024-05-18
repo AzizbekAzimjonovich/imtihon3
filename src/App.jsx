@@ -5,6 +5,7 @@ import Earphones from "./pages/Earphones";
 import Headphones from "./pages/Headphones";
 import Speakers from "./pages/Speakers";
 import Main from "./pages/Main";
+import SingleProduct from "./pages/SingleProduct";
 
 function App() {
   const routers = createBrowserRouter([
@@ -16,16 +17,20 @@ function App() {
           element: <Main />,
         },
         {
-          path: "earphones",
+          path: "/earphones",
           element: <Earphones />,
         },
         {
-          path: "headphones",
+          path: "/headphones",
           element: <Headphones />,
         },
         {
-          path: "speakers",
+          path: "/speakers",
           element: <Speakers />,
+        },
+        {
+          path: "/product/:id",
+          element: <SingleProduct />,
         },
       ],
     },

@@ -1,0 +1,71 @@
+.headphones-list {
+  background-color: #fff;
+}
+.headphones-container {
+  h1 {
+    font-family: Manrope;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 1.4285714626312256px;
+    text-align: center;
+    color: #fff;
+    padding: 90px;
+  }
+}
+
+.card-headphone {
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  padding-top: 160px;
+  img {
+    border-radius: 10px;
+  }
+}
+.text-new {
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.12px;
+  letter-spacing: 10px;
+  text-align: left;
+  color: #d87d4a;
+  margin-bottom: 16px;
+}
+.text-name {
+  font-family: Manrope;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 1.4285714626312256px;
+  text-align: left;
+  margin-bottom: 32px;
+}
+.text-info {
+  font-family: Manrope;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
+  opacity: 0.5;
+  margin-bottom: 40px;
+}
+.see-product {
+  background-color: #d87d4a;
+  padding: 15px 30px;
+  font-family: Manrope;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 17.76px;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #ffffff;
+  text-decoration: none;
+}
+.none {
+  display: none;
+}
