@@ -1,0 +1,62 @@
+.main-container {
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%; /* Balandlikni sahifa balandligiga teng qilib qo'ying */
+  display: flex;
+  align-items: center;
+  background-image: url("../assets/home/desktop/image-hero.jpg"); /* Background image yo'lini to'g'rilang */
+  background-size: cover; /* Rasmni konteynerga moslashtiring */
+  background-position: center; /* Rasmni markazda joylashtiring */
+}
+
+.main {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 128px;
+  margin-bottom: 158px;
+  .product {
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.12px;
+    letter-spacing: 10px;
+    text-align: left;
+    color: #ffffff;
+    opacity: 0.5;
+  }
+  .headphone {
+    font-family: Manrope;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 58px;
+    letter-spacing: 2px;
+    text-align: left;
+    color: #ffffff;
+  }
+  .info {
+    font-family: Manrope;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: left;
+    color: #ffffff;
+    opacity: 0.75;
+  }
+  .btn {
+    background: #fbaf85;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Manrope;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 17.76px;
+    letter-spacing: 1px;
+    text-align: left;
+    width: 160px;
+    margin-top: 16px;
+  }
+}

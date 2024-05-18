@@ -1,0 +1,47 @@
+.productCard {
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 204px;
+  top: 80px;
+  gap: 0px;
+  opacity: 0px;
+  background: #f1f1f1;
+  margin-top: 200px;
+  border-radius: 10px;
+}
+.headImg {
+  position: absolute;
+  margin-bottom: 150px;
+}
+.headphones {
+  margin-top: 100px;
+  font-family: Manrope;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24.59px;
+  letter-spacing: 1.2857142686843872px;
+  text-align: center;
+}
+.shopLink {
+  font-family: Manrope;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 17.76px;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #d87d4a;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding-bottom: 3px;
+}
