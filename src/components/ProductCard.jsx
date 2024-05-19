@@ -19,14 +19,14 @@ function ProductCard() {
       <div className="card">
         <img className="headImg" src={speakers} alt="" width={223} />
         <p className="headphones">SPEAKERS</p>
-        <Link className="shopLink" to={"/headphones"}>
+        <Link className="shopLink" to={"/speakers"}>
           <p className="shopLink">shop</p> <img src={arrow} alt="" />
         </Link>
       </div>
       <div className="card">
         <img className="headImg" src={earphones} alt="" width={223} />
         <p className="headphones">EARPHONES</p>
-        <Link className="shopLink" to={"/headphones"}>
+        <Link className="shopLink" to={"/earphones"}>
           <p className="shopLink">shop</p> <img src={arrow} alt="" />
         </Link>
       </div>

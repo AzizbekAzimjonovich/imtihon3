@@ -92,3 +92,40 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.btns {
+  display: flex;
+  gap: 20px;
+  .see-product {
+    border: none;
+    transition: all 0.5s;
+  }
+  .see-product:hover {
+    opacity: 0.5;
+  }
+}
+.quantity-controls {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 15px 30px;
+  background-color: #f1f1f1;
+  button {
+    border: none;
+    cursor: pointer;
+    font-family: Manrope;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 17.76px;
+    letter-spacing: 1px;
+    text-align: center;
+    opacity: 0.25;
+  }
+  span {
+    font-family: Manrope;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 17.76px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+}

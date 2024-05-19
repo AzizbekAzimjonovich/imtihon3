@@ -24,6 +24,10 @@
     text-align: left;
     margin-right: 34px;
     color: #ffffff;
+    transition: all 0.5s;
+  }
+  .link:hover {
+    color: #d87d4a;
   }
 }
 .logo {

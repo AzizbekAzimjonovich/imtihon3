@@ -1,5 +1,8 @@
 // src/App.jsx
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Provider } from "react-redux"; // Import the Provider component
+import store from "./store"; // Import your Redux store
+
 import Home from "./pages/Home";
 import Earphones from "./pages/Earphones";
 import Headphones from "./pages/Headphones";
@@ -36,7 +39,13 @@ function App() {
     },
   ]);
 
-  return <RouterProvider router={routers} />;
+  return (
+    <Provider store={store}>
+      {" "}
+      {/* Wrap the App component with Provider and pass the store */}
+      <RouterProvider router={routers} />
+    </Provider>
+  );
 }
 
 export default App;

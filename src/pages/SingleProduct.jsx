@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addItem,
+  increaseQuantity,
+  decreaseQuantity,
+} from "../features/cart/cartSlice";
 import { Link } from "react-router-dom";
 import { imgs } from "./Headphones";
 import { imgs1 } from "./Speakers";
@@ -44,6 +51,8 @@ function SingleProduct() {
   const [product, setProduct] = useState(null);
   const [error, setError] = useState(null);
   const { id } = useParams();
+  const [quantity, setQuantity] = useState(0);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     fetch(`http://localhost:3000/product/${id}`)
@@ -59,6 +68,30 @@ function SingleProduct() {
         console.error("Error fetching data:", error);
       });
   }, [id]);
+
+  const handleIncrease = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
+  };
+
+  const handleDecrease = () => {
+    if (quantity > 1) {
+      setQuantity((prevQuantity) => prevQuantity - 1);
+    }
+  };
+
+  const handleAddToCart = () => {
+    dispatch(addItem({ ...product, quantity }));
+  };
+
+  const increaseQuantity = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
+  };
+
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity((prevQuantity) => prevQuantity - 1);
+    }
+  };
 
   if (error) {
     return <div>Error: {error.message}</div>;
@@ -94,9 +127,16 @@ function SingleProduct() {
             <h2 className="text-name">{product.name}</h2>
             <p className="text-info">{product.description}</p>
             <p className="price">${product.price}</p>
-            <Link to={`/product/${product.id}`} className="see-product">
-              ADD TO CART
-            </Link>
+            <div className="btns">
+              <div className="quantity-controls ">
+                <button onClick={handleDecrease}>-</button>
+                <span>{quantity}</span>
+                <button onClick={handleIncrease}>+</button>
+              </div>
+              <button onClick={handleAddToCart} className="see-product">
+                ADD TO CART
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -110,9 +150,9 @@ function SingleProduct() {
           <p className="text-feature">IN THE BOX</p>
 
           {product.includes.map((e, index) => (
-            <p className="description" key={index}>
-              <span>{e.quantity}x</span> <p>{e.item}</p>
-            </p>
+            <div className="description" key={index}>
+              <span>{e.quantity}x</span> <span>{e.item}</span>
+            </div>
           ))}
         </div>
       </div>
