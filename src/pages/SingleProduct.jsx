@@ -151,7 +151,7 @@ function SingleProduct() {
 
           {product.includes.map((e, index) => (
             <div className="description" key={index}>
-              <span>{e.quantity}x</span> <span>{e.item}</span>
+              <span>{e.quantity}x</span> <p>{e.item}</p>
             </div>
           ))}
         </div>

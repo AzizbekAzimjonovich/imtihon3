@@ -9,6 +9,7 @@ import Headphones from "./pages/Headphones";
 import Speakers from "./pages/Speakers";
 import Main from "./pages/Main";
 import SingleProduct from "./pages/SingleProduct";
+import Cart from "./components/Cart";
 
 function App() {
   const routers = createBrowserRouter([
@@ -34,6 +35,10 @@ function App() {
         {
           path: "/product/:id",
           element: <SingleProduct />,
+        },
+        {
+          path: "/cart",
+          element: <Cart />,
         },
       ],
     },
